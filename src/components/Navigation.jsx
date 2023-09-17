@@ -1,14 +1,25 @@
+import { Link } from 'react-router-dom';
+
 const Navigation = () => {
   return (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       <li className="nav-item">
-        <a
+        <Link
           className="nav-link active"
           aria-current="page"
-          href="#"
+          to="/"
         >
           Home
-        </a>
+        </Link>
+        </li>
+        <li className="nav-item">
+        <Link
+          className="nav-link active"
+          aria-current="page"
+          to="/stockimages"
+        >
+          My Stocks Images
+        </Link>
       </li>
     </ul>
   );
