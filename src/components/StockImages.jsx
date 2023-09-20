@@ -11,14 +11,14 @@ const StockImages = () => {
   
   const items = useMemo(() => {
     const username = currentUser?.displayName.split(' ').join('');
-    const filtered = state.items.filter((item) => item.user === username);
+    const filtered = state.items.filter((item) => item.user === username?.toLowerCase());
     return currentUser ? filtered : [];
   }, [currentUser, state.items])
 
   return (
     <>
       <h1>My stock images</h1>
-      <List items={[]} />
+      <List items={items} />
     </>
   );
 };
